@@ -1,0 +1,62 @@
+/* Top black bar */
+.topbar {
+  background: black;
+  color: #ff4d6d;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+  font-size: 12px;
+}
+
+/* Navbar */
+.navbar {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Logo center */
+.nav-center h1 {
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+/* Right icons */
+/* .nav-right {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  display: flex;
+  gap: 15px;
+} */
+
+.nav-right {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.lang {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: large;
+}

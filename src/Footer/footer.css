@@ -1,0 +1,411 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 80px;
+  font-family: sans-serif;
+}
+
+/* CONTAINER (important for alignment) */
+.footer {
+  width: 100%;          /* ✅ full width */
+  background: #000;
+  color: #fff;
+  padding: 50px 80px;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;    /* center */
+  padding: 0 80px;   /* inner spacing */
+  box-sizing: border-box;
+}
+/* TOP SECTION */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+/* LEFT */
+.footer-left h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 13px;
+  color: #bbb;
+}
+
+/* Input */
+.subscribe-box {
+  display: flex;
+  margin-top: 20px;
+}
+
+.subscribe-box input {
+  width: 280px;
+  padding: 12px;
+  border: none;
+  background: #f4f4f4;
+  color: #000;
+}
+
+.subscribe-box button {
+  padding: 12px 25px;
+  margin-left: 10px;
+  border: 1px solid #555;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* RIGHT */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;   /* 🔥 FIX: left align everything */
+  text-align: left;          /* 🔥 FIX: text left */
+
+  gap: 25px;
+}
+
+.footer-right h4 {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+
+.contact {
+  text-align: left;
+  align-self: flex-start; /* 🔥 ensures no centering */
+}
+
+.contact h4 {
+  margin-bottom: 6px;
+}
+
+.contact p {
+  margin: 2px 0;
+}
+
+
+/* CURRENCY */
+
+.currency-section {
+  text-align: left;
+  align-self: flex-start;  /* 🔥 key fix */
+ 
+}
+
+.currency-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 🔥 keep left */
+  gap: 6px;
+}
+
+
+
+
+.currency-desc {
+  font-size: 11px;
+  color: #888;
+
+  white-space: nowrap;   /* 🔥 keeps in one line */
+}
+
+
+.currency-box img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+
+
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+.dot {
+  font-size: 15px;
+  color: #fffefe;
+}
+
+/* Divider */
+.footer hr {
+  margin: 40px 0;
+  border-top: 2px solid #ffffff;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.footer-bottom h4 {
+  margin-bottom: 10px;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #bbb;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.footer-bottom p:hover {
+  color: #fff;
+}
+
+/* THIRD COLUMN (FOLLOW US) */
+.footer-bottom div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* 🔥 LEFT ALIGN */
+  text-align: left;
+}
+
+/* SOCIAL */
+.social-icons {
+  display: flex;
+  justify-content: flex-start; /* 🔥 LEFT */
+  gap: 15px;
+}
+
+.social-icons svg {
+  border: 1px solid #555;
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 32px;
+}
+
+/* PAYMENTS */
+.payments {
+  display: flex;
+  justify-content: flex-start; /* 🔥 LEFT */
+  gap: 10px;
+}
+
+.payments img {
+  width: 55px;
+  height: 35px;
+  object-fit: fill;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+ 
+}
+
+.social-icons {
+  margin-bottom: 20px; /* pushes content below */
+}
+
+/* COPYRIGHT */
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #888;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 40px 20px; /* reduce side spacing */
+  }
+
+  /* TOP SECTION STACK */
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* LEFT + RIGHT full width */
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+
+  /* INPUT full width */
+  .subscribe-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .subscribe-box input {
+    width: 100%;
+  }
+
+  .subscribe-box button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* BOTTOM STACK */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* CENTER FOLLOW US */
+  .footer-bottom div:nth-child(3) {
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .payments {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* FIX LONG TEXT */
+  .currency-desc {
+    white-space: normal; /* allow wrap in mobile */
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .footer {
+    padding: 50px 40px;
+  }
+
+  .footer-top {
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    gap: 30px;
+  }
+
+  .payments img {
+    width: 40px;
+  }
+}
+
+.footer-title {
+  display: flex;
+  justify-content: space-between; /* 🔥 pushes arrow right */
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* arrow */
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* rotate */
+.rotate {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ================= INPUT FIX ================= */
+  .subscribe-box {
+    display: flex;
+    flex-direction: row; /* ✅ IMPORTANT */
+    width: 100%;
+    gap: 8px;
+  }
+
+  .subscribe-box input {
+    flex: 1;
+    width: auto;
+  }
+
+  .subscribe-box button {
+    width: auto;
+    margin-left: 0;
+  }
+
+  /* ================= CONTACT FIX ================= */
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .contact p {
+    margin: 0;
+  }
+
+  .contact p:first-child::after {
+    content: " • ";
+    margin: 0 6px;
+  }
+
+  /* ================= DIVIDER ================= */
+  .footer hr {
+    border: none;
+    border-top: 2px solid #fff; /* ✅ white like figma */
+    margin: 20px 0;
+  }
+
+  /* ================= BOTTOM ================= */
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    border-top: 2px solid #fff; /* ✅ FIXED */
+    padding: 14px 0;
+  }
+
+  .footer-section:first-child {
+    border-top: none;
+  }
+
+  /* ================= TITLE ================= */
+  .footer-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* ================= SOCIAL ================= */
+  .social-icons {
+    display: flex;
+    gap: 12px;
+  }
+
+  /* ================= PAYMENTS ================= */
+  .payments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+}

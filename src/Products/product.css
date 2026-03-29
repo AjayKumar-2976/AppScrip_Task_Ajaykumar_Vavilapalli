@@ -1,0 +1,93 @@
+.product-grid {
+  flex: 1;                /* ✅ VERY IMPORTANT */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+/* when filter hidden */
+.product-grid.full-width {
+  grid-template-columns: repeat(4, 1fr);
+}
+.product-card img {
+  width: 100%;
+}
+
+/* .product-card h3 {
+  font-size: 14px;
+  margin-top: 10px;
+}  */
+ 
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;   /* ✅ equal height */
+}
+
+.product-card p {
+  font-size: 12px;
+  color: gray;
+}
+
+.product-card {
+  border: 1px solid #eee;
+  padding: 10px;
+}
+
+/* Image container */
+.product-card img {
+  width: 100%;
+  height: 250px;      /* ✅ fixed height */
+  object-fit: cover;  /* ✅ crops nicely */
+}
+
+
+.product-bottom {
+  display: flex;
+  justify-content: space-between; /* 🔥 pushes left & right */
+  align-items: center;
+  gap: 10px;
+}
+
+/* Left text */
+.signin-text {
+  font-size: 12px;
+  color: #777;
+  flex: 1;              /* 🔥 takes full space */
+}
+
+/* Right heart */
+.heart {
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+/* Red when clicked */
+.heart svg {
+  transition: 0.2s;
+}
+
+.heart svg:hover {
+  transform: scale(1.1);
+}
+
+.heart svg {
+  color: black;
+}
+
+.heart.active svg {
+  color: red;
+}
+
+.signin-text {
+  cursor: pointer;
+}
+
+.signin-text:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,16 @@
+.main-section {
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+  width:100%;
+}
+
+/* Left filter width */
+.main-section > :first-child {
+  width: 20%;
+}
+
+/* Right grid */
+.main-section > :last-child {
+  width: 80%;
+}

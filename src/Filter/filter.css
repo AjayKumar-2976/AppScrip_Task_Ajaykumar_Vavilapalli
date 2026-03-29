@@ -1,0 +1,39 @@
+.filters {
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+
+/* Header */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.hide-filter {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Checkbox */
+.filter-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Groups */
+.filter-group {
+  border-top: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.filter-group p {
+  font-weight: 500;
+}
+
+.filter-group span {
+  font-size: 12px;
+  color: gray;
+}
