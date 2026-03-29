@@ -5,6 +5,7 @@
   font-family: sans-serif;
 }
 
+
 /* CONTAINER (important for alignment) */
 .footer {
   width: 100%;          /* ✅ full width */
@@ -212,11 +213,15 @@
 }
 
 /* COPYRIGHT */
+
 .copyright {
   text-align: center;
-  margin-top: 40px;
-  font-size: 12px;
-  color: #888;
+  margin-top: 30px;
+
+  font-size: 20px;     /* 🔥 bigger */
+  font-weight: 500;    /* slightly bold */
+
+  color: #ccc;         /* better visibility */
 }
 
 
@@ -264,9 +269,9 @@
 
   /* CENTER FOLLOW US */
   .footer-bottom div:nth-child(3) {
-    align-items: center;
-    text-align: center;
-  }
+  align-items: center;
+  text-align: center;
+}
 
   .social-icons {
     justify-content: center;
@@ -461,3 +466,47 @@
   }
 
 }
+
+@media (max-width: 768px) {
+
+  /* FORCE LEFT ALIGN */
+  .footer-bottom div:nth-child(3) {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .payments img {
+  width: 60px;
+  height: 35px;
+  object-fit: contain;
+  flex-shrink: 0;   /* 🔥 prevents shrinking */
+}
+
+@media (max-width: 768px) {
+
+.payments {
+  display: flex;
+
+  flex-direction: row !important;   /* 🔥 FORCE ROW */
+  flex-wrap: nowrap;               /* 🔥 NO NEXT LINE */
+
+  gap: 10px;
+  align-items: center;
+
+  overflow-x: auto;                /* scroll if needed */
+}
+
+.payments img {
+  width: 55px;
+  height: 35px;
+  object-fit: contain;
+
+  flex-shrink: 0;   /* 🔥 prevents stacking */
+}
+
+  /* 🔥 ADD HERE */
+  .payments::-webkit-scrollbar {
+    display: none;
+  }
+
+}}

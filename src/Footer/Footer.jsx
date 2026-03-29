@@ -19,7 +19,6 @@ const Footer = () => {
     setOpen(open === section ? null : section);
   };
 
-  // ✅ detect mobile
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -32,162 +31,147 @@ const Footer = () => {
   }, []);
 
   return (
-  <footer className="footer">
-    <div className="footer-container">
+    <footer className="footer">
+      <div className="footer-container">
 
-      {/* TOP */}
-      <div className="footer-top">
+        {/* TOP */}
+        <div className="footer-top">
 
-        {/* LEFT */}
-        <div className="footer-left">
-          <h3>BE THE FIRST TO KNOW</h3>
-          <p>Sign up for updates from mettā muse.</p>
+          {/* LEFT */}
+          <div className="footer-left">
+            <h3>BE THE FIRST TO KNOW</h3>
+            <p>Sign up for updates from mettā muse.</p>
 
-          <div className="subscribe-box">
-            <input type="text" placeholder="Enter your e-mail..." />
-            <button>SUBSCRIBE</button>
+            <div className="subscribe-box">
+              <input type="text" placeholder="Enter your e-mail..." />
+              <button>SUBSCRIBE</button>
+            </div>
           </div>
-        </div>
 
-        {/* RIGHT */}
-        <div className="footer-right">
-         <div className="contact">
-<div className="contact">
-    <div className="contact-title">
+          {/* RIGHT */}
+          <div className="footer-right">
 
-  <h4>{isMobile ? "CALL US" : "CONTACT US"}</h4>
-</div>
-  {isMobile ? (
-    <>
-      {/* 👇 force next line */}
-      <div className="contact-row">
-        <span>+44 221 133 5360</span>
-        <span className="dot">♦</span>
-        <span>customercare@mettāmuse.com</span>
-      </div>
-    </>
-  ) : (
-    <>
-      <p>+44 221 133 5360</p>
-      <p>customercare@mettāmuse.com</p>
-    </>
-  )}
-</div>
-</div>
+            <div className="contact">
+              <h4>{isMobile ? "CALL US" : "CONTACT US"}</h4>
 
-          <div className="currency-section">
-            <h4>CURRENCY</h4>
-
-            <div className="currency-box">
-              <img src={us} alt="flag" />
-              <span className="dot">•</span>
-              <span>USD</span>
+              {isMobile ? (
+                <div className="contact-row">
+                  <span>+44 221 133 5360</span>
+                  <span className="dot">♦</span>
+                  <span>customercare@mettāmuse.com</span>
+                </div>
+              ) : (
+                <>
+                  <p>+44 221 133 5360</p>
+                  <p>customercare@mettāmuse.com</p>
+                </>
+              )}
             </div>
 
-            <p className="currency-desc">
-              Transactions will be completed in Euros and a currency reference is available on hover.
-            </p>
-          </div>
-        </div>
+            <div className="currency-section">
+              <h4>CURRENCY</h4>
 
-      </div>
-
-      <hr />
-
-      {/* BOTTOM */}
-      <div className="footer-bottom">
-
-        {/* mettā muse */}
-        <div className="footer-section">
-          <div className="footer-title" onClick={() => toggle("muse")}>
-            <h4>mettā muse</h4>
-
-            {isMobile && (
-              <FiChevronDown
-                className={`arrow ${open === "muse" ? "rotate" : ""}`}
-              />
-            )}
-          </div>
-
-          {(isMobile ? open === "muse" : true) && (
-            <div className="footer-links">
-              <p>About Us</p>
-              <p>Stories</p>
-              <p>Artisans</p>
-              <p>Boutiques</p>
-              <p>Contact Us</p>
-              <p>EU Compliances Docs</p>
-            </div>
-          )}
-        </div>
-
-        {/* QUICK LINKS */}
-        <div className="footer-section">
-          <div className="footer-title" onClick={() => toggle("links")}>
-            <h4>QUICK LINKS</h4>
-
-            {isMobile && (
-              <FiChevronDown
-                className={`arrow ${open === "links" ? "rotate" : ""}`}
-              />
-            )}
-          </div>
-
-          {(isMobile ? open === "links" : true) && (
-            <div className="footer-links">
-              <p>Orders & Shipping</p>
-              <p>Join/Login as a Seller</p>
-              <p>Payment & Pricing</p>
-              <p>Return & Refunds</p>
-              <p>FAQs</p>
-              <p>Privacy Policy</p>
-              <p>Terms & Conditions</p>
-            </div>
-          )}
-        </div>
-
-        {/* FOLLOW US */}
-        <div className="footer-section">
-          <div className="footer-title" onClick={() => toggle("social")}>
-            <h4>FOLLOW US</h4>
-
-            {isMobile && (
-              <FiChevronDown
-                className={`arrow ${open === "social" ? "rotate" : ""}`}
-              />
-            )}
-          </div>
-
-          {(isMobile ? open === "social" : true) && (
-            <>
-              <div className="social-icons">
-                <FaInstagram />
-                <FaLinkedin />
+              <div className="currency-box">
+                <img src={us} alt="flag" />
+                <span className="dot">•</span>
+                <span>USD</span>
               </div>
 
-              <h4 className="payments-title">mettā muse ACCEPTS</h4>
+              <p className="currency-desc">
+                Transactions will be completed in Euros and a currency reference is available on hover.
+              </p>
+            </div>
 
-              <div className="payments">
-                <img src={gpay} alt="gpay" />
-                <img src={master} alt="mastercard" />
-                <img src={paypal} alt="paypal" />
-                <img src={amex} alt="amex" />
-                <img src={apple} alt="apple pay" />
-              </div>
-            </>
-          )}
+          </div>
         </div>
 
-      </div>
+        <hr />
 
-      {/* COPYRIGHT */}
-      <p className="copyright">
-        Copyright © 2023 mettāmuse. All rights reserved.
-      </p>
+        {/* BOTTOM */}
+        <div className="footer-bottom">
 
+          {/* mettā muse */}
+          <div className="footer-section">
+            <div className="footer-title" onClick={() => toggle("muse")}>
+              <h4>mettā muse</h4>
+              {isMobile && (
+                <FiChevronDown className={`arrow ${open === "muse" ? "rotate" : ""}`} />
+              )}
+            </div>
+
+            {(isMobile ? open === "muse" : true) && (
+              <div className="footer-links">
+                <p>About Us</p>
+                <p>Stories</p>
+                <p>Artisans</p>
+                <p>Boutiques</p>
+                <p>Contact Us</p>
+                <p>EU Compliances Docs</p>
+              </div>
+            )}
+          </div>
+
+          {/* QUICK LINKS */}
+          <div className="footer-section">
+            <div className="footer-title" onClick={() => toggle("links")}>
+              <h4>QUICK LINKS</h4>
+              {isMobile && (
+                <FiChevronDown className={`arrow ${open === "links" ? "rotate" : ""}`} />
+              )}
+            </div>
+
+            {(isMobile ? open === "links" : true) && (
+              <div className="footer-links">
+                <p>Orders & Shipping</p>
+                <p>Join/Login as a Seller</p>
+                <p>Payment & Pricing</p>
+                <p>Return & Refunds</p>
+                <p>FAQs</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+              </div>
+            )}
+          </div>
+
+          {/* FOLLOW US */}
+ <div className="footer-section">
+  <div className="footer-title" onClick={() => toggle("social")}>
+    <h4>FOLLOW US</h4>
+    {isMobile && (
+      <FiChevronDown className={`arrow ${open === "social" ? "rotate" : ""}`} />
+    )}
+  </div>
+
+  {/* ONLY SOCIAL ICONS TOGGLE */}
+  {(isMobile ? open === "social" : true) && (
+    <div className="social-icons">
+      <FaInstagram />
+      <FaLinkedin />
     </div>
-  </footer>
-);
+  )}
+
+  {/* 🔥 ALWAYS VISIBLE (OUTSIDE TOGGLE) */}
+  <h4 className="payments-title">mettā muse ACCEPTS</h4>
+
+  <div className="payments">
+    <img src={gpay} alt="gpay" />
+    <img src={master} alt="mastercard" />
+    <img src={paypal} alt="paypal" />
+    <img src={amex} alt="amex" />
+    <img src={apple} alt="apple pay" />
+  </div>
+</div>
+
+        </div>
+
+        {/* COPYRIGHT */}
+        <p className="copyright">
+          Copyright © 2023 mettāmuse. All rights reserved.
+        </p>
+
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

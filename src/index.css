@@ -1,9 +1,40 @@
 @import "tailwindcss";
 
+
+/* 1️⃣ Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* 2️⃣ Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 3️⃣ Elements */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 4️⃣ Your components */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
 body {
   height:100%;
   margin: 0;
 }
+
 
 
 
