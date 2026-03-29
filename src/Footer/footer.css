@@ -409,3 +409,55 @@
   }
 
 }
+
+/* ===== MOBILE RESPONSIVE FIX ===== */
+@media (max-width: 768px) {
+
+  /* MAIN FOOTER */
+  .footer {
+    padding: 40px 20px;
+  }
+
+  /* TOP SECTION STACK */
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* LEFT + RIGHT FULL WIDTH */
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+
+  /* INPUT + BUTTON FIX */
+  .subscribe-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .subscribe-box input,
+  .subscribe-box button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* CONTACT TEXT FIX */
+  .contact p {
+    word-break: break-word;
+  }
+
+  /* CURRENCY TEXT FIX */
+  .currency-desc {
+    max-width: 100%;
+  }
+
+  /* BOTTOM SECTION STACK */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+}
